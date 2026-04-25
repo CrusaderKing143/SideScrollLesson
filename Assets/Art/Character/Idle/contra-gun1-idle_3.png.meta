@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 92a9f10123ce64766b9b8e9db5ce5bef
+guid: af0e0c1ed31774649b06c3a4e3be5986
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5504761991077726910
-    second: dimian_0
+      213: 1990816675195607128
+    second: contra-gun1-idle_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 371
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dimian_0
+      name: contra-gun1-idle_3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 373
-        height: 349
+        x: 8
+        y: 2
+        width: 180
+        height: 225
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eba824b8dd7d46c40800000000000000
-      internalID: 5504761991077726910
+      spriteID: 85855f1e73dc0ab10800000000000000
+      internalID: 1990816675195607128
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dimian_0: 5504761991077726910
+      contra-gun1-idle_3_0: 1990816675195607128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
