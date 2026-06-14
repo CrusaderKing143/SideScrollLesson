@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7a1003a11a7444dc6861df53eef67c02
+guid: 5b59476eab17046c798fc2bc48c8dac6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6153074221735857542
-    second: handwear_0
+      213: 5015689001002306291
+    second: InitialArm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: handwear_0
+      name: InitialArm_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 115
-        height: 114
+        x: 39
+        y: 98
+        width: 1515
+        height: 736
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68dcd2f776c146550800000000000000
-      internalID: 6153074221735857542
+      spriteID: 3fa8398729e4b9540800000000000000
+      internalID: 5015689001002306291
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InitialArm_0: 5015689001002306291
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
