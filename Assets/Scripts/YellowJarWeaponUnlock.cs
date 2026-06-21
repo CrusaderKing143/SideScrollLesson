@@ -8,6 +8,7 @@ public sealed class YellowJarWeaponUnlock : MonoBehaviour
     public ShootController shootController;
     public SpriteRenderer armSpriteRenderer;
     public Sprite yellowArmSprite;
+    public GameShootTeach gameShootTeach;
 
     private void Start()
     {
@@ -15,6 +16,8 @@ public sealed class YellowJarWeaponUnlock : MonoBehaviour
         armRenderer = armSpriteRenderer;
         unlockedArmSprite = yellowArmSprite;
         shootController.canShoot = false;
+
+        EnsureGameShootTeach();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,7 +26,20 @@ public sealed class YellowJarWeaponUnlock : MonoBehaviour
         {
             armRenderer.sprite = unlockedArmSprite;
             shootController.canShoot = true;
+            EnsureGameShootTeach();
+            if (gameShootTeach)
+                gameShootTeach.ShowGuide();
             jarObject.SetActive(false);
         }
+    }
+
+    private void EnsureGameShootTeach()
+    {
+        if (gameShootTeach)
+            return;
+
+        gameShootTeach = FindObjectOfType<GameShootTeach>();
+        if (!gameShootTeach)
+            gameShootTeach = new GameObject("GameShootTeach").AddComponent<GameShootTeach>();
     }
 }

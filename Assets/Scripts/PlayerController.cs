@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public sealed class PlayerController : MonoBehaviour
 {
     [Header("Move")]
@@ -27,12 +26,17 @@ public sealed class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Vector3 startScale;
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         startScale = transform.localScale;
+
+ 
     }
+
+
 
     private void Update()
     {

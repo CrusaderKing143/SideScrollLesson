@@ -7,6 +7,7 @@ public sealed class RestorableDropBox : MonoBehaviour
     public Color restoredColor = Color.white;
     public float fallSpeed = 6f;
     public string gameOverDetail = "Crushed by the falling box";
+    public GameShootTeach gameShootTeach;
 
     private int hitCount;
     private bool falling;
@@ -16,6 +17,9 @@ public sealed class RestorableDropBox : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = fadedColor;
         GetComponent<Collider2D>().isTrigger = true;
+
+        if (!gameShootTeach)
+            gameShootTeach = FindObjectOfType<GameShootTeach>();
     }
 
     private void Update()
@@ -32,6 +36,11 @@ public sealed class RestorableDropBox : MonoBehaviour
             return;
 
         hitCount++;
+        if (!gameShootTeach)
+            gameShootTeach = FindObjectOfType<GameShootTeach>();
+
+        if (gameShootTeach)
+            gameShootTeach.RegisterTargetHit(this, hitCount, hitsToDrop);
 
         float colorT = (float)hitCount / hitsToDrop;
         GetComponent<SpriteRenderer>().color = Color.Lerp(fadedColor, restoredColor, colorT);

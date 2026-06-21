@@ -14,12 +14,16 @@ public sealed class PlayerBullet : MonoBehaviour
     {
         RestorableDropBox box = other.GetComponent<RestorableDropBox>();
         RestorableLadderPlatform ladder = other.GetComponent<RestorableLadderPlatform>();
+        RestorableLadderStayPlatform stayPlatform = other.GetComponent<RestorableLadderStayPlatform>();
 
         if (box)
             box.HitByBullet(this);
 
         if (ladder)
             ladder.HitByBullet(this);
+
+        if (stayPlatform)
+            stayPlatform.HitByBullet(this);
     }
 
     public void DestroyBullet()

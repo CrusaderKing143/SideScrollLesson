@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class ShootController : MonoBehaviour
 {
@@ -12,6 +13,25 @@ public sealed class ShootController : MonoBehaviour
     private void Start()
     {
     
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        if (SceneManager.GetActiveScene().name == "No2")
+        {
+            canShoot = true;
+        }
+            
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "No2")
+        {
+            canShoot = true;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void Update()
